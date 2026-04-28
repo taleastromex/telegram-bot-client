@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Http\User\Controllers;
+namespace App\Http\EntryPointGroup\User\Controllers;
 
 use App\Abstracts\Controller;
 use App\Domain\User\Actions\LoginAction;
 use App\Domain\User\Actions\RegisterAction;
-use App\Http\User\Requests\LoginRequest;
-use App\Http\User\Requests\RegisterRequest;
-use App\Http\User\Resources\NewAccessTokenResource;
+use App\Http\EntryPointGroup\User\Requests\LoginRequest;
+use App\Http\EntryPointGroup\User\Requests\RegisterRequest;
+use App\Http\EntryPointGroup\User\Resources\NewAccessTokenResource;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
