@@ -1,12 +1,12 @@
 <script lang="ts">
-import { mapGetters } from "vuex";
+import { useUserStore } from '../../store/user'
 
 export default {
-    computed: {
-        ...mapGetters(['getAccessToken'])
+    setup() {
+        return { userStore: useUserStore() }
     },
     created(): any {
-        if (this.getAccessToken) {
+        if (this.userStore.getAccessToken) {
             this.$router.push({name: 'dashboard'})
         }
     }
@@ -15,7 +15,7 @@ export default {
 
 <template>
     <transition>
-        <router-view/>
+        <router-view />
     </transition>
 </template>
 

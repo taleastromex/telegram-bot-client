@@ -3,15 +3,15 @@ export default {
     data() {
         return {}
     },
-    methods: {},
     created() {},
+    methods: {},
 }
 </script>
 
 <template>
-<div>
-    Hello there!
-</div>
+    <div>
+        Hello there!
+    </div>
 </template>
 
 <style scoped>

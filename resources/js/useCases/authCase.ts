@@ -1,6 +1,6 @@
 import user from "../requests/modules/user";
 import {router} from "../router";
-import store from "../store";
+import { useUserStore } from "../store/user";
 
 export default {
     signIn(email: string, password: string) {
@@ -10,8 +10,8 @@ export default {
                     const token = response.data.access_token
 
                     localStorage.setItem('token', token)
-                    store.dispatch('setAccessToken', token)
-                        .then(() => router.push({name: 'dashboard'}))
+                    useUserStore().setAccessToken(token)
+                    router.push({name: 'dashboard'})
 
                     resolve(token)
                 })
@@ -25,8 +25,8 @@ export default {
                     const token = response.data.access_token
 
                     localStorage.setItem('token', token)
-                    store.dispatch('setAccessToken', token)
-                        .then(() => router.push({name: 'dashboard'}))
+                    useUserStore().setAccessToken(token)
+                    router.push({name: 'dashboard'})
 
                     resolve(token)
                 })
@@ -38,8 +38,8 @@ export default {
             user.signOut()
                 .then(() => {
                     localStorage.removeItem('token')
-                    store.dispatch('setAccessToken', null)
-                        .then(() => router.push({name: 'sign-in'}))
+                    useUserStore().setAccessToken(null)
+                    router.push({name: 'sign-in'})
 
                     resolve(true)
                 })

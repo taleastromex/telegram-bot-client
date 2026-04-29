@@ -1,13 +1,13 @@
 import axios, {AxiosRequestConfig} from 'axios'
-import store from "../store";
+import { useUserStore } from "../store/user";
 
 const apiUrl = import.meta.env.VITE_API_URL
 
 function setDefaultConfig (config?: AxiosRequestConfig)  {
-    const token = store.getters['getAccessToken']
+    const token = useUserStore().getAccessToken
 
     const headers = {
-        Authorization: token ? 'Bearer ' + store.getters['getAccessToken'] : null
+        Authorization: token ? 'Bearer ' + token : null
     }
 
     return {

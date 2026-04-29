@@ -1,20 +1,20 @@
 <script lang="ts">
-import {mapActions} from "vuex";
+import { useUserStore } from './store/user'
 
 export default {
-    methods: {
-        ...mapActions(['setAccessToken'])
+    setup() {
+        return { userStore: useUserStore() }
     },
     created() {
         const token = localStorage.getItem('token')
-        this.setAccessToken(token)
+        this.userStore.setAccessToken(token)
     }
 }
 </script>
 
 <template>
     <transition>
-        <router-view/>
+        <router-view />
     </transition>
 </template>
 
