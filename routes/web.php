@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->middleware('guest.token');
 
 Route::get('/{any}', function () {
     return view('app');
