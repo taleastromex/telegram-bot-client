@@ -37,7 +37,7 @@ export default {
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <!--            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="mx-auto h-10 w-auto" />-->
-            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight dark:text-white">
                 Sign in to your account
             </h2>
         </div>
@@ -52,7 +52,7 @@ export default {
                 <div>
                     <label
                         for="email"
-                        class="block text-sm/6 font-medium text-gray-100"
+                        class="block text-sm/6 font-medium dark:text-gray-100"
                     >Email address</label>
                     <div class="mt-2">
                         <input
@@ -62,7 +62,7 @@ export default {
                             name="email"
                             required
                             autocomplete="email"
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                 </div>
@@ -71,7 +71,7 @@ export default {
                     <div class="flex items-center justify-between">
                         <label
                             for="password"
-                            class="block text-sm/6 font-medium text-gray-100"
+                            class="block text-sm/6 font-medium dark:text-gray-100"
                         >Password</label>
                         <div class="text-sm">
                             <a
@@ -88,7 +88,7 @@ export default {
                             name="password"
                             required
                             autocomplete="current-password"
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                 </div>
@@ -111,7 +111,7 @@ export default {
                 </div>
             </form>
 
-            <p class="mt-10 text-center text-sm/6 text-gray-400">
+            <p class="mt-10 text-center text-sm/6 dark:text-gray-400 text-gray-700">
                 Not a member?
                 <router-link
                     :to="{name: 'sign-up'}"
