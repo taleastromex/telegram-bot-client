@@ -50,7 +50,7 @@ export default {
 <template>
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+            <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight dark:text-white">
                 Create your account
             </h2>
         </div>
@@ -65,8 +65,8 @@ export default {
                 <div>
                     <label
                         for="name"
-                        class="block text-sm/6 font-medium text-gray-100"
-                        :class="{'text-gray-100': errors.name.length <= 0, 'text-red-600': errors.name.length > 0}"
+                        class="block text-sm/6 font-medium"
+                        :class="{'dark:text-gray-100': errors.name.length <= 0, 'text-red-600': errors.name.length > 0}"
                     >
                         Name
                     </label>
@@ -78,7 +78,7 @@ export default {
                             type="text"
                             name="name"
                             required
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                     <span
@@ -93,7 +93,7 @@ export default {
                     <label
                         for="email"
                         class="block text-sm/6 font-medium"
-                        :class="{'text-gray-100': errors.email.length <= 0, 'text-red-600': errors.email.length > 0}"
+                        :class="{'dark:text-gray-100': errors.email.length <= 0, 'text-red-600': errors.email.length > 0}"
                     >
                         Email address
                     </label>
@@ -105,7 +105,7 @@ export default {
                             type="email"
                             name="email"
                             required
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                     <span
@@ -121,7 +121,7 @@ export default {
                         <label
                             for="password"
                             class="block text-sm/6 font-medium"
-                            :class="{'text-gray-100': errors.password.length <= 0, 'text-red-600': errors.password.length > 0}"
+                            :class="{'dark:text-gray-100': errors.password.length <= 0, 'text-red-600': errors.password.length > 0}"
                         >
                             Password
                         </label>
@@ -134,7 +134,7 @@ export default {
                             type="password"
                             name="password"
                             required
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                     <span
@@ -150,7 +150,7 @@ export default {
                         <label
                             for="password_confirmation"
                             class="block text-sm/6 font-medium"
-                            :class="{'text-gray-100': errors.password.length <= 0, 'text-red-600': errors.password.length > 0}"
+                            :class="{'dark:text-gray-100': errors.password.length <= 0, 'text-red-600': errors.password.length > 0}"
                         >
                             Password Confirmation
                         </label>
@@ -163,7 +163,7 @@ export default {
                             type="password"
                             name="password_confirmation"
                             required
-                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                            class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base dark:text-white outline-1 -outline-offset-1 dark:outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         >
                     </div>
                     <span
@@ -186,7 +186,7 @@ export default {
                 </div>
             </form>
 
-            <p class="mt-10 text-center text-sm/6 text-gray-400">
+            <p class="mt-10 text-center text-sm/6 dark:text-gray-400 text-gray-700">
                 Already have an account?
                 <router-link
                     :to="{name: 'sign-in'}"
